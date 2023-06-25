@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mukta:wght@300&family=Roboto:wght@500&display=swap");
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Bebas Neue", cursive;
+  padding: 3rem 0 1.2rem 0;
+}
+
+.faq-layout {
+  width: 100%;
+}
+.tab-heading {
+  font-family: "Bebas Neue", cursive;
+  padding: 0rem 4.36rem;
+  font-size: 1.5rem;
+}
+
+.panel-content {
+  font-family: "Mukta", sans-serif;
+  font-weight: bold;
+}
+
+.panel-content ul li {
+  padding-bottom: 0.2rem;
+  padding-top: 1rem;
+  font-family: "Mukta", sans-serif;
+  font-weight: 100;
+}

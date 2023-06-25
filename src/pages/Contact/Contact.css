@@ -1,0 +1,188 @@
+.contt {
+  margin: 5rem 0 7rem 0;
+}
+
+.contact-us-layout {
+  width: 100%;
+}
+.contacts-email-heading {
+  display: flex;
+  justify-content: space-around;
+}
+.contacts-email-heading p {
+  justify-content: center;
+  font-size: 4rem;
+  font-family: "Bebas Neue", cursive;
+  align-content: center;
+}
+
+.contact-email {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-email p {
+  margin-left: 4.4rem;
+  font-size: 2rem;
+  font-family: "Bebas Neue", cursive;
+}
+
+.feedback {
+  text-align: center;
+  font-size: 4rem;
+  justify-content: space-between;
+  font-family: "Bebas Neue", cursive;
+  margin-bottom: 3rem;
+}
+
+.form {
+  font-size: 1rem;
+  margin-left: 15rem;
+}
+
+.control label {
+  font-family: "Mukta", sans-serif;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.control input {
+  border: 0.05rem solid #ccc;
+  padding-left: 0.4rem;
+  font-family: "Mukta", sans-serif;
+  border-radius: 0.3rem;
+  width: 50rem;
+  height: 2.3rem;
+  max-width: 100%;
+}
+
+.control textarea {
+  border: 0.05rem solid #ccc;
+  padding-left: 0.4rem;
+  font-family: "Mukta", sans-serif;
+  border-radius: 0.3rem;
+  width: 50rem;
+  max-width: 100%;
+}
+
+.checkboxes {
+  margin-top: 2rem;
+}
+
+.checkboxes p {
+  display: flex;
+  padding-left: 0.4rem;
+  font-family: "Mukta", sans-serif;
+  border-radius: 0.3rem;
+  width: 50rem;
+  height: 2.3rem;
+  max-width: 100%;
+}
+
+.actions {
+  margin-top: 2rem;
+  margin-right: 12rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.actions button {
+  color: black;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+  font-family: "Mukta", cursive;
+}
+
+.actions button:hover,
+.actions button:active {
+  color: white;
+  background-color: rgb(181, 105, 252);
+}
+
+.actions .submit {
+  border: 0.2rem solid rgb(216, 215, 215);
+  background-color: blueviolet;
+  color: white;
+}
+
+.actions .submit:hover,
+.actions .submit:active {
+  border: 0.2rem solid rgb(99, 99, 99);
+  background-color: rgb(181, 105, 252);
+}
+
+.invalid label {
+  color: #aa0b20;
+}
+.invalid p {
+  color: #aa0b20;
+  font-family: "Mukta", cursive;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.invalid input {
+  border-color: #aa0b20;
+  background-color: #ffeff1;
+}
+.invalid textarea {
+  border-color: #aa0b20;
+  background-color: #ffeff1;
+}
+
+.close-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tick-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tick-mark p {
+  font-family: "Bebas neue", cursive;
+  font-size: 2rem;
+  animation: text-anim 1000ms ease-in-out;
+}
+
+#tick {
+  animation: tick-anim 800ms ease-in-out;
+}
+
+@keyframes text-anim {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tick-anim {
+  0% {
+    transform: scale(1.4);
+    transform: translateX(12rem);
+  }
+  50% {
+    transform: translateX(12rem);
+    font-size: 10rem;
+  }
+  100% {
+    /* font-size: 2rem; */
+    transform: translateX(0);
+  }
+}

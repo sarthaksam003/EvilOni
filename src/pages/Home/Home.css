@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.home {
+  width: 100%;
+  min-height: auto;
+}
+.headings {
+  padding: 2rem 0 0 0;
+  width: 100%;
+  /* font-size: 5rem; */
+  font-size: 5rem;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  /* height: 38rem; */
+  /* width: 86.3rem; */
+}
+.remove-dec {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.remove-dec {
+  text-decoration: none;
+}
+
+.kard {
+  border: rgb(219, 216, 216) 0.1rem solid;
+  /* border: black 0.5rem solid; */
+  border-radius: 0.6rem;
+  height: 32rem;
+  width: 17.8rem;
+  margin: 2rem 0 2rem 2rem;
+  transition: transform 300ms ease-in-out;
+}
+
+.kard:hover {
+  transform: scale(1.1);
+}
+
+.kard-contents {
+  width: 20rem;
+}
+.kard-contents img {
+  width: 16.8rem;
+  margin: 0.4rem;
+  border-radius: 0.6rem;
+}
+.kard-contents-img {
+  width: 16.8rem;
+  margin: 0.4rem;
+  border-radius: 0.6rem;
+}
+
+.kard-itemdetails {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+.kard-itemdetails div {
+  text-decoration: none;
+}
+
+.kard-itemtype p {
+  margin-right: 0.22rem;
+  padding: 0;
+  font-family: "Mukta", cursive;
+}
+.kard-itemname h2 {
+  margin-right: 2rem;
+  padding: 0;
+  font-size: 1.5rem;
+  font-family: "Bebas Neue", cursive;
+}
+.kard-itemprice h3 {
+  margin-right: 2rem;
+}
+.card-body-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.nav-arrows {
+  font-size: 2.3rem;
+  margin-top: 35rem;
+  display: flex;
+}
+
+.nav-arrow:hover {
+  background-color: blueviolet;
+}
+
+@media only screen and (max-width: 900px) {
+  .element-to-hide {
+    display: none;
+  }
+  .home {
+    width: 100%;
+    margin-bottom: 1rem;
+    /* border: 2px solid red; */
+  }
+  .headings {
+    font-size: 15vw;
+  }
+
+  .kard {
+    margin: 0;
+  }
+}

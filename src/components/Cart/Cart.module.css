@@ -1,0 +1,104 @@
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 20rem;
+  overflow: auto;
+}
+
+.emptycart {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  font-size: 7rem;
+  /* margin-bottom:2rem */
+}
+
+.close-btn{
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.emptycart p{
+  margin-left:2rem;
+  padding-top:3.1rem;
+  font-family: "Mukta", cursive;
+  font-family: "Bebas Neue", cursive;
+  font-size: 3rem
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.total span {
+  font-family: "Mukta", cursive;
+}
+
+.actions {
+  text-align: right;
+}
+
+.actions button {
+  font-family: "Mukta", cursive;
+  cursor: pointer;
+  /* background-color: transparent; */
+  border: 3px solid rgb(216, 215, 215);
+  padding: 0.5rem 2rem;
+  border-radius: 15px;
+  margin-left: 1rem;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: rgb(181, 105, 252);
+  border-color: rgb(99, 99, 99);
+  color: white;
+}
+
+.actions .button--alt {
+  color: black;
+}
+
+.actions .button {
+  background-color: blueviolet;
+  color: white;
+}
+
+.order {
+  height: 19rem;
+  border: 2px solid #ddd;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

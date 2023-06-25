@@ -1,0 +1,102 @@
+.ctr {
+  margin: 2rem;
+}
+.flexing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkout-layout {
+  width: 100%;
+  min-height: 100vh;
+}
+.checkout-heading {
+  font-family: "Bebas Neue", cursive;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.checkout-heading p {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.4rem;
+}
+.checkout-heading-active p {
+  font-family: "Bebas Neue", cursive;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.checkout-heading hr {
+  margin: auto;
+  width: 90%;
+}
+
+.proceed-btn {
+  display: flex;
+  justify-content: space-evenly;
+  /* margin-right:  */
+}
+.total-amount p {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.4rem;
+  justify-content: center;
+  /* margin-top: 2rem;   */
+}
+.proceed-btn div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-amount {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Bebas Neue", cursive;
+  font-size: 5rem;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: center;
+}
+.cart {
+  font-weight: 700;
+  font-size: 3.7rem;
+}
+.details {
+  font-weight: 700;
+  font-size: 3.7rem;
+}
+.order {
+  font-weight: 700;
+  font-size: 3.7rem;
+}
+
+.bill-details {
+  width: 50rem;
+  margin-bottom: 3rem;
+}
+.bill-details h1 {
+  font-family: "Bebas Neue", cursive;
+  margin-bottom: 4rem;
+}
+.bill-details div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bill-details div p {
+  font-size: 3.4rem;
+}
+.cart-empty {
+  font-size: 4rem;
+}
+.cart-empty p {
+  font-size: 4rem;
+  font-family: "Bebas Neue", cursive;
+}
+
+.cart-empty-layout {
+  margin: 10rem 0 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

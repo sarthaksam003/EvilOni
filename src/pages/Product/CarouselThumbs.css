@@ -1,0 +1,28 @@
+.carouselthumbs {
+  width: 30rem;
+}
+
+.carousel-control {
+  padding-right: 11rem;
+}
+.carousel-control-next-icon {
+  position: absolute;
+  top: 19rem;
+  left: 0.6rem;
+  background-color: black;
+}
+
+.carousel-control-prev-icon {
+  background-color: black;
+  position: absolute;
+  top: 19rem;
+  right: 6rem;
+}
+
+.carousel-indicators{
+  opacity : 0;
+}
+/* .carousel-indicators button{
+  
+    
+} */

@@ -1,0 +1,17 @@
+@media only screen and (max-width: 900px) {
+  .actions {
+    display: none !important;
+  }
+  .carousel-control-prev-icon {
+    display: none !important;
+    border: 2px solid red;
+  }
+
+  .carousel-control-next-icon {
+    display: none !important;
+  }
+
+  .carousel.indicators {
+    display: none !important;
+  }
+}

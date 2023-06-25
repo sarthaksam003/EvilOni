@@ -1,0 +1,38 @@
+.checkout-item-card {
+  display: flex;
+  margin: 1rem;
+  height: 10rem;
+  width: 32rem;
+  border: 2px solid #ddd;
+  border-radius: 0.8rem;
+}
+
+.checkout-item-card-itemimg img {
+  border-radius: 0.5rem;
+  width: 7rem;
+  height: 8rem;
+  margin: 0.8rem;
+}
+.checkout-item-card-itemname p {
+  margin: 0.8rem;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5rem;
+}
+.add-remove {
+  display: flex;
+  justify-content: flex-end;
+}
+.add-remove-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.3rem;
+  margin: 0 0.3rem 0 ;
+}
+
+.checkout-item-card-pricesizequantity {
+  width: 22rem;
+  display: flex;
+  justify-content: space-evenly;
+}

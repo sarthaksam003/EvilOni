@@ -1,0 +1,26 @@
+.ctr {
+  display: inline-block;
+  justify-content: center;
+}
+
+.bill-details{
+  margin-left: 14rem;
+}
+
+.bill-details div {
+  margin-top: 0;
+}
+.bill-details h1 {
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+}
+
+.bill-details p {
+  font-family: "Bebas Neue", cursive;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bill-details div p {
+  font-size: 3.4vh;
+}

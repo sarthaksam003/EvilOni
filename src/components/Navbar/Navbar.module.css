@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mukta:wght@300&display=swap");
+
+.appBarContainer {
+  background: rgb(37, 36, 37) !important;
+}
+
+.brandLogo {
+  width: 15rem;
+}
+.brandLogoMob {
+  width: 15rem;
+  display: none;
+}
+.navbarRoutesLayout {
+  display: flex;
+  justify-content: space-evenly;
+}
+.navbarRoutesItem {
+  text-decoration: none;
+}
+.AdbIconMob {
+  display: none;
+}
+#menu-appbar {
+  width: 50%;
+}
+#menu-appbar {
+  background-color: aqua;
+  width: 100%;
+}
+.nav-menu-items {
+  width: 100%;
+  text-decoration: none;
+}
+
+.nav-menu-items:hover {
+  color: white;
+}
+.navbar-toggle {
+  background-color: #292929;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.sidebar-items-container {
+  margin-top: 8rem;
+}
+.sidebar-items {
+  background-color: #292929;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (max-width: 900px) {
+  .brandLogo {
+    width: 15rem;
+    display: none;
+  }
+
+  .brandLogoMob {
+    width: 5rem;
+    display: block;
+  }
+  .navbarRoutesLayout {
+    display: none;
+  }
+  .AdbIconMob {
+    display: block;
+    width: 9rem;
+  }
+}

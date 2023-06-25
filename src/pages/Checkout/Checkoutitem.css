@@ -1,0 +1,46 @@
+.card {
+  display: flex;
+  margin: 2rem 0;
+  height: 14.7rem;
+  width: 60rem;
+  /* border: 2px solid red; */
+}
+.card img {
+  width: 9.6rem;
+  width: 9.6rem;
+  margin: 0.86rem;
+}
+.card-contents {
+  display: flex;
+  margin-right: 3vw;
+}
+.card-body p {
+  font-family: "Mukta", cursive;
+}
+.card-body h2,
+h3 {
+  font-family: "Bebas Neue", cursive;
+}
+.card-body h4 {
+  font-family: "Mukta", cursive;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.proceed-btn {
+  display: flex;
+  align-items: flex-end;
+  font-family: "Bebas Neue", cursive;
+}
+
+.add-remove-btn {
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: auto;
+  }
+}

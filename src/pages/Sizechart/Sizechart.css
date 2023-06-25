@@ -1,0 +1,51 @@
+.heading {
+  display: flex;
+  justify-content: center;
+}
+.size-chart-layout {
+  width: 100%;
+}
+.size-chart-heading {
+  font-size: 4rem;
+  padding: 5rem 0 2rem 0;
+  justify-items: center;
+  font-family: "Bebas Neue", cursive;
+}
+
+.size-tables {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.size-tables p {
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+}
+
+.table-properties {
+  text-align: center;
+}
+
+.table-properties th {
+  font-family: "Mukta", sans-serif;
+}
+
+.table-properties td {
+  font-family: "Mukta", sans-serif;
+}
+
+.size-chart-layout-mob {
+  display: none;
+}
+.alignment {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 900px) {
+  .alignment {
+    display: flex;
+    flex-direction: column;
+  }
+}

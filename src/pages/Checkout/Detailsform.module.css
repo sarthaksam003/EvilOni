@@ -1,0 +1,99 @@
+.container {
+  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 7rem;
+}
+.form {
+  margin: 2px solid black;
+  margin: 1rem 0;
+  height: 26rem;
+  /* justify-content: flex-start; */
+  /*Change the margin-bottom in responsive*/
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  justify-content: center;
+  font-family: "Bebas Neue", cursive;
+}
+.control label p {
+  font-family: "Bebas Neue", cursive;
+}
+
+.control input {
+  font: inherit;
+  border: 1px solid #ccc;
+  font-family: "Mukta", cursive;
+  padding-left: 0.5rem;
+  border-radius: 0.2rem;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  font-family: "Mukta", cursive;
+}
+
+.actions button {
+  margin-top: 2rem;
+  font: inherit;
+  color: black;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 15rem;
+  padding: 0.5rem 2rem;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: rgb(181, 105, 252);
+  border-color: rgb(99, 99, 99);
+  color: white;
+}
+
+.actions .submit {
+  border: 3px solid rgb(99, 99, 99);
+  background-color: blueviolet;
+  color: white;
+}
+
+.actions .submit:hover,
+.actions .submit:active {
+  background-color: rgb(181, 105, 252);
+}
+
+.invalid label {
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ca3e51;
+  
+}
+
+.invalid label p{
+  font-family: "Bebas Neue", cursive;
+}
+
+.invalid input {
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+  padding-left: 0.5rem;
+  width: 20rem;
+  max-width: 100%;
+  font-family: "Mukta", cursive;
+  border-color: #aa0b20;
+  background-color: #ffeff1;
+  /* margin-bottom: 0.3rem; */
+}

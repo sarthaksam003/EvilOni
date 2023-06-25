@@ -1,0 +1,95 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160rem;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  position: fixed;
+  top: 10rem;
+  left: 5%;
+  width: 90%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  animation: slide-down 300ms ease-out forwards;
+}
+
+.closebutton {
+  display: flex;
+  justify-content: flex-end;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  transform: translateX(7.2rem);
+}
+.logo img {
+  width: 20rem;
+  animation: logo-slide-left 2000ms forwards;
+}
+
+.orderdetails {
+  margin-top: 8rem;
+  animation: details-slide-right 2000ms forwards;
+}
+.orderdetails h2 {
+  font-family: "Bebas Neue", cursive;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logo-slide-left {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  75% {
+    transform: scale(1);
+  }
+  100% {
+    transform: translateX(-9rem);
+  }
+}
+
+@keyframes details-slide-right {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+    transform:translateX(-18rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-9rem);
+  }
+}
