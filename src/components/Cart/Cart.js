@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import Modal from "./Modal";
 import classes from "./Cart.module.css";
 import { Link } from "react-router-dom";

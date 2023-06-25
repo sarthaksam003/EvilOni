@@ -93,6 +93,7 @@ const Checkout = () => {
     };
     console.log(JSON.stringify(orderDetails));
     try {
+      // eslint-disable-next-line
       const response = await fetch(
         "https://eviloni-backend.onrender.com/order",
         {
