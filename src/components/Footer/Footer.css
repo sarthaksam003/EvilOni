@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
 .footer-layout {
   background-color: #242424;
 }
@@ -107,6 +105,9 @@
   }
 } */
 @media (max-width: 900px) {
+  .footer-layout {
+  margin-top: 2rem;
+  }
   .footer {
     display: none;
   }

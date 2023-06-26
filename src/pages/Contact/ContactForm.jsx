@@ -1,17 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import {
-  Paper,
-  TextField,
-  Grid,
-  Avatar,
-  useMediaQuery,
-  Box,
-  Typography,
-  Button,
-} from "@mui/material";
-
+import { TextField, Grid, useMediaQuery, Button } from "@mui/material";
 const registerSchema = yup.object({
   name: yup
     .string()
@@ -20,42 +10,35 @@ const registerSchema = yup.object({
     .max(30)
     .required("Should be atleast 2 characters long"),
   email: yup.string().trim().email().required("Enter a valid email"),
-  password: yup
+  remark: yup
     .string()
+    .trim()
     .min(6)
-    .required("Password must be atleast 6 characters long"),
-  confirmPassword: yup
-    .string()
-    .min(6)
-    .required("Passwords must match")
-    .oneOf([yup.ref("password"), null], "Passwords must match"),
+    .required("Feedback must be atleast 6 characters long"),
 });
 
 const initialRegisterValues = {
   name: "",
   email: "",
-  password: "",
-  confirmPassword: "",
+  remark: "",
 };
 
-const RegisterForm = ({ toggleSuccesModal }) => {
-  const isNonMobile = useMediaQuery("(min-width:1200px)");
+const RegisterForm = ({ callbackToGrabFeedback }) => {
+  const isNonMobile = useMediaQuery("(min-width:900px)");
 
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues: initialRegisterValues,
       validationSchema: registerSchema,
       onSubmit: async (values, action) => {
-        toggleSuccesModal();
-
         const feedbackToSend = {
           name: values.name.trim(),
           email: values.email.trim(),
-          password: values.password,
+          remark: values.remark.trim(),
         };
-        console.log(
-          `Name: ${feedbackToSend.name}\nEmail: ${feedbackToSend.email}\nPassword: ${feedbackToSend.password}`
-        );
+        // console.log(
+        //   `Name: ${feedbackToSend.name}\nEmail: ${feedbackToSend.email}\Remark: ${feedbackToSend.remark}`
+        // );
         // await fetch("https://techvinform-backend.onrender.com/formdata", {
         //   method: "POST",
         //   body: JSON.stringify(feedbackToSend),
@@ -64,6 +47,7 @@ const RegisterForm = ({ toggleSuccesModal }) => {
         //   },
         // });
         action.resetForm();
+        callbackToGrabFeedback(feedbackToSend);
       },
     });
 
@@ -106,41 +90,25 @@ const RegisterForm = ({ toggleSuccesModal }) => {
           </Grid>
           <Grid item xs={12}>
             <TextField
+              multiline
+              maxRows={6}
+              aria-label="empty textarea"
+              placeholder="Empty"
+              id="remark"
               variant="outlined"
               required
               fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              value={values.password}
+              name="remark"
+              label="Remark"
+              type="text"
+              value={values.remark}
               onChange={handleChange}
               onBlur={handleBlur}
-              autoComplete="current-password"
+              autoComplete="current-remark"
               helperText={
-                errors.password && touched.password ? `${errors.password}` : ""
+                errors.remark && touched.remark ? `${errors.remark}` : ""
               }
-              error={errors.password && touched.password}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              variant="outlined"
-              required
-              fullWidth
-              name="confirmPassword"
-              label="Confirm password"
-              type="password"
-              id="confirmPassword"
-              value={values.confirmPassword}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={
-                errors.confirmPassword && touched.confirmPassword
-                  ? `${errors.confirmPassword}`
-                  : ""
-              }
-              error={errors.confirmPassword && touched.confirmPassword}
+              error={errors.remark && touched.remark}
             />
           </Grid>
         </Grid>
