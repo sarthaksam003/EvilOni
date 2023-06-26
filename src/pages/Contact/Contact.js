@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import Form from "react-bootstrap/Form";
-import "./Contact.css";
+import ContactForm from "./ContactForm.jsx";
 import * as BsIcons from "react-icons/bs";
 import * as HiIcons from "react-icons/hi";
 import * as VscIcons from "react-icons/vsc";
@@ -8,7 +7,7 @@ import * as FaIcons from "react-icons/fa";
 import * as GrIcons from "react-icons/gr";
 import Modal from "../../components/Cart/Modal";
 import { Link } from "react-router-dom";
-
+import classes from "./Contact.module.css";
 const Contact = (props) => {
   const [showModal, setShowModal] = useState(false);
   const [nameValid, setNameValid] = useState("neutral");
@@ -105,10 +104,10 @@ const Contact = (props) => {
 
   return (
     <React.Fragment>
-      <div className="contact-us-layout">
+      <div className={classes["contact-us-layout"]}>
         {showModal && (
           <Modal onClose={props.onClose}>
-            <div className="close-btn">
+            <div className={classes["close-btn"]}>
               <Link to="/">
                 <GrIcons.GrClose
                   style={{ cursor: "pointer" }}
@@ -116,7 +115,7 @@ const Contact = (props) => {
                 />
               </Link>
             </div>
-            <div className="tick-mark">
+            <div className={classes["tick-mark"]}>
               <FaIcons.FaCheckCircle
                 style={{ fontSize: "10rem", margin: "2rem" }}
                 id="tick"
@@ -125,7 +124,31 @@ const Contact = (props) => {
             </div>
           </Modal>
         )}
-        <div className="contt">
+        <div className={classes["contt"]}>
+          <div className={classes["contacts-email-heading"]}>
+            <div>
+              <BsIcons.BsTelephoneOutbound
+                style={{ width: "2.6rem", marginRight: "0.7rem" }}
+              />
+              Call us
+            </div>
+            <div style={{ fontSize: "2rem", marginLeft: "1rem" }}>
+              8383838383
+            </div>
+          </div>
+          <div className={classes["contacts-email-heading"]}>
+            <div>
+              <HiIcons.HiOutlineMail
+                style={{ width: "2.6rem", marginRight: "0.7rem" }}
+              />
+              Email
+            </div>
+            <div style={{ fontSize: "2rem", marginLeft: "1rem" }}>
+              connect@eviloni.com
+            </div>
+          </div>
+        </div>
+        {/* <div className="contt">
           <div className="contacts-email-heading">
             <p>
               <BsIcons.BsTelephoneOutbound
@@ -142,93 +165,14 @@ const Contact = (props) => {
             <p>8383838383</p>
             <p>connect@eviloni.com</p>
           </div>
-        </div>
-        <div className="container">
-          <div className="feedback">
+        </div> */}
+        <div className={classes["container"]}>
+          <div className={classes["feedback"]}>
             <VscIcons.VscFeedback style={{ marginRight: "0.4rem" }} />
             SHOW US SOME LOVE. SEND US A FEEDBACK
           </div>
-          <div className="container feedback-form">
-            <form className="form" onSubmit={onSubmitHandler}>
-              <div
-                className={`control ${nameValid === "false" ? "invalid" : ""}`}
-              >
-                <label htmlFor="name">Your Name</label>
-                {nameValid === "false" ? (
-                  <p>Name must be more than 4 characters</p>
-                ) : (
-                  ""
-                )}
-                <input
-                  type="text"
-                  id="name"
-                  ref={nameRef}
-                  onChange={nameValidator}
-                />
-              </div>
-              <div
-                className={`control ${emailValid === "false" ? "invalid" : ""}`}
-              >
-                <label htmlFor="email">E-mail Address</label>
-                {emailValid === "false" ? (
-                  <p>Email must include '@' followed by valid domain name</p>
-                ) : (
-                  ""
-                )}
-                <input
-                  type="email"
-                  id="email"
-                  ref={emailRef}
-                  onChange={emailValidator}
-                />
-              </div>
-              <div
-                className={`control ${
-                  remarkValid === "false" ? "invalid" : ""
-                }`}
-              >
-                <label htmlFor="remarks">Remarks</label>
-                {remarkValid === "false" ? (
-                  <p>Remark or feedback must be more than 4 characters long</p>
-                ) : (
-                  ""
-                )}
-                <textarea
-                  type="text"
-                  id="remarks"
-                  ref={remarkRef}
-                  onChange={remarkValidator}
-                />
-              </div>
-              <div className="checkboxes">
-                <p>
-                  <Form.Check
-                    type="checkbox"
-                    id="checkbox"
-                    onClick={subscribedOrNot}
-                    value={subscription}
-                  />
-                  <p>Click this to subscribe to the Evil Oni Newsletter!</p>
-                </p>
-              </div>
-              <div className="actions">
-                <button
-                  type="submit"
-                  className="submit"
-                  disabled={
-                    (nameValid && emailValid && remarkValid === "false") ||
-                    (nameValid && emailValid && remarkValid === "neutral")
-                      ? true
-                      : false
-                  }
-                >
-                  Confirm
-                </button>
-                <button type="button" onClick={clearInputFields}>
-                  Clear
-                </button>
-              </div>
-            </form>
+          <div id={classes["feedbackform"]}>
+            <ContactForm />
           </div>
         </div>
       </div>

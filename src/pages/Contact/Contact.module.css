@@ -170,6 +170,10 @@
 #tick {
   animation: tick-anim 800ms ease-in-out;
 }
+#feedbackform {
+  display: flex !important;
+  justify-content: center !important;
+}
 
 @keyframes text-anim {
   0% {
@@ -204,5 +208,12 @@
 @media only screen and (max-width: 900px) {
   .contt {
     flex-direction: column;
+  }
+  .feedback {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+  #feedbackform {
+    padding: 0 2rem !important;
   }
 }
