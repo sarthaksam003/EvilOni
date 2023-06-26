@@ -1,7 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { TextField, Grid, useMediaQuery, Button } from "@mui/material";
+import { TextField, Grid, Button } from "@mui/material";
 const registerSchema = yup.object({
   name: yup
     .string()
@@ -24,8 +24,6 @@ const initialRegisterValues = {
 };
 
 const RegisterForm = ({ callbackToGrabFeedback }) => {
-  const isNonMobile = useMediaQuery("(min-width:900px)");
-
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues: initialRegisterValues,
