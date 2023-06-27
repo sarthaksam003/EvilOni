@@ -21,30 +21,62 @@ const CheckoutCartItem = (props) => {
   };
 
   return (
+    // <div className="container">
+    //   <div className={classes["checkout-item-card"]}>
+    //     <div className={classes["checkout-item-card-itemimg"]}>
+    //       <img src={props.img} alt={props.name} />
+    //     </div>
+    //     <div className={classes["checkout-item-card-itemname"]}>
+    //       <div>{props.name}</div>
+    //       <div className={classes["checkout-item-card-pricesizequantity"]}>
+    //         <p>Size: {props.size}</p>
+    //         <p>Price: {props.price}</p>
+    //         <p>Quantity: {props.quantity}</p>
+    //       </div>
+    //       <div className={classes["add-remove"]}>
+    //         <AiIcons.AiOutlinePlusCircle
+    //           className={classes["add-remove-btn"]}
+    //           onClick={addItem}
+    //         />
+    //         <AiIcons.AiOutlineMinusCircle
+    //           className={classes["add-remove-btn"]}
+    //           onClick={removeItem}
+    //         />
+    //       </div>
+    //     </div>
+    //     <div className={classes["checkout-item-card-itemname"]}></div>
+    //   </div>
+    // </div>
     <div className="container">
       <div className={classes["checkout-item-card"]}>
-        <div className={classes["checkout-item-card-itemimg"]}>
-          <img src={props.img} alt={props.name} />
-        </div>
-        <div className={classes["checkout-item-card-itemname"]}>
-          <p>{props.name}</p>
-          <div className={classes["checkout-item-card-pricesizequantity"]}>
-            <p>Size: {props.size}</p>
-            <p>Price: {props.price}</p>
-            <p>Quantity: {props.quantity}</p>
+        <div className={classes["checkout-item"]}>
+          <div className={classes["checkout-item-card-itemname"]}>
+            <div>{props.name}</div>
+            <div className={classes["checkout-item-card-pricesizequantity"]}>
+              <div>Size: {props.size}</div>
+              <div>Price: {props.price}</div>
+            </div>
+
+            <div className={classes["add-remove"]}>
+            <div>Quantity: {props.quantity}</div>
+              <AiIcons.AiOutlinePlusCircle
+                className={classes["add-remove-btn"]}
+                onClick={addItem}
+              />
+              <AiIcons.AiOutlineMinusCircle
+                className={classes["add-remove-btn"]}
+                onClick={removeItem}
+              />
+            </div>
           </div>
-          <div className={classes["add-remove"]}>
-            <AiIcons.AiOutlinePlusCircle
-              className={classes["add-remove-btn"]}
-              onClick={addItem}
-            />
-            <AiIcons.AiOutlineMinusCircle
-              className={classes["add-remove-btn"]}
-              onClick={removeItem}
+          <div className={classes["item-img"]}>
+            <img
+              src={props.img}
+              alt={props.name}
+              style={{ width: "100%", borderRadius: "8px" }}
             />
           </div>
         </div>
-        <div className={classes["checkout-item-card-itemname"]}></div>
       </div>
     </div>
   );

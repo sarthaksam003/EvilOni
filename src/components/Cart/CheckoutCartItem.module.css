@@ -1,38 +1,70 @@
 .checkout-item-card {
   display: flex;
   margin: 1rem;
-  height: 10rem;
+  height: auto;
   width: 32rem;
   border: 2px solid #ddd;
-  border-radius: 0.8rem;
-}
-
-.checkout-item-card-itemimg img {
   border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+.checkout-item {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.item-img {
+  margin: 0.1rem;
+  width: 10rem;
+}
+.checkout-item-card-itemimg img {
+  border-radius: 0.2rem;
   width: 7rem;
   height: 8rem;
   margin: 0.8rem;
 }
-.checkout-item-card-itemname p {
+.checkout-item-card-itemname {
+  width: 100%;
   margin: 0.8rem;
-  text-align: center;
   font-family: "Bebas Neue", cursive;
   font-size: 1.5rem;
 }
 .add-remove {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-start;
 }
 .add-remove-btn {
   cursor: pointer;
   display: flex;
   justify-content: flex-end;
   font-size: 1.3rem;
-  margin: 0 0.3rem 0 ;
+  margin: 0 0.3rem 0;
 }
 
 .checkout-item-card-pricesizequantity {
-  width: 22rem;
+  width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 900px) {
+  .checkout-item-card {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 2rem 0rem;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 0.8rem;
+    /* margin-bottom: 2rem; */
+  }
+  .checkout-item-card-pricesizequantity {
+    width: 100%;
+    display: flex;
+  }
+  .checkout-item-card-itemname {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+  }
 }
