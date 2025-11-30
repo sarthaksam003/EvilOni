@@ -148,8 +148,10 @@ const Footer = () => {
         <div className="footerMob">
           <div className="useful-links">
             <div>
-              <ul>
-                Need Help?
+              <ul className="borderRed">
+                <span className="">
+                  Need Help?
+                </span>
                 <li>
                   <Link
                     to="/contact-us"

@@ -85,10 +85,19 @@
 .useful-links {
   display: flex;
   justify-content: space-around;
+  margin-top: 1rem;
 }
 
 .useful-links ul {
   font-family: "Mukta", sans-serif;
+  color: white;
+  font-size: 1rem;
+}
+.useful-links ul span {
+  font-size: 1rem;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
 }
 
 .useful-links ul li {
