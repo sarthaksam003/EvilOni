@@ -53,7 +53,7 @@ const Home = () => {
   }, []);
   return (
     <div className="home">
-      <div>
+      <div className="home-carousel">
         <ControlledCarousel deviceType={isMobile ? "mobile" : "desktop"} />
       </div>
       <div className="new-arrivals">

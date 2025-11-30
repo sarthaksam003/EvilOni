@@ -8,6 +8,7 @@
 
 .emptycart {
   display: flex;
+  flex-direction: column;
   align-content: center;
   align-items: center;
   justify-content: center;
@@ -15,6 +16,10 @@
   font-size: 7rem;
   padding: 2rem;
   /* margin-bottom:2rem */
+}
+.emptycart span {
+  margin: 0;
+  padding: 0;
 }
 
 .close-btn {
@@ -26,8 +31,6 @@
 }
 
 .emptycart p {
-  margin-left: 2rem;
-  padding-top: 3.1rem;
   font-family: "Mukta", cursive;
   font-family: "Bebas Neue", cursive;
   font-size: 3rem;
@@ -107,5 +110,13 @@
   .emptycart {
     flex-direction: column;
     padding: 0rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .emptycart span {
+    font-size: 5rem;
+  }
+  .emptycart p {
+    font-size: 1rem;
   }
 }

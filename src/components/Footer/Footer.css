@@ -5,7 +5,7 @@
 .footer {
   background-color: #242424;
   margin-top: 7rem;
-  padding: 2rem 0 0 2.8rem;
+  padding: 2rem 0;
   color: white;
   font-size: 1.4rem;
   font-family: "Bebas Neue", cursive;
@@ -39,7 +39,6 @@
 .copyright-text {
   font-family: "Mukta", sans-serif;
   font-size: 1rem;
-  padding-left: 3rem;
   text-align: center;
 }
 
@@ -50,18 +49,33 @@
 }
 
 .sm-icons {
+  /* display: flex; */
+  /* justify-content: center; */
   cursor: pointer;
-  padding-left: 1rem;
-  padding-bottom: 0.2rem;
   font-family: "Mukta", sans-serif;
+  margin-right: 1rem !important;
 }
-
+.borderRed {
+  border: 2px solid red;
+}
 .sponsors {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.first-sp-icon {
+  margin-left: 1rem;
+}
+.sp-icons span {
+  font-size: 2.5rem;
+  padding: 0;
+}
+.evil-oni-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .evil-oni-logo img {
   width: 10rem;
   margin: 0%;
@@ -90,7 +104,7 @@
 
 .end {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   width: 100%;
 }
 
@@ -104,9 +118,40 @@
     overflow: hidden;
   }
 } */
+.rupee-symbol {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+.refresh-symbol {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
+.gplay-icon {
+  width: 9rem;
+}
+.appstore-icon {
+  width: 8rem;
+  margin-left: 0.5rem;
+}
+.visa-icon {
+  font-size: 2.5rem !important;
+  margin-right: 1rem !important;
+  margin-left: 1rem;
+}
+.fedex-icon {
+  margin-left: 1rem;
+  font-size: 3.5rem;
+  margin-right: 1rem;
+}
+.shipping-icons span {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+}
+
 @media (max-width: 900px) {
   .footer-layout {
-  margin-top: 2rem;
+    margin-top: 2rem;
   }
   .footer {
     display: none;
@@ -118,6 +163,10 @@
   .useful-links {
     display: flex;
     background-color: #242424;
+    justify-content: center !important;
+  }
+  .useful-links ul {
+    font-size: 0.5rem;
   }
   .appnavssocials {
     display: flex;
@@ -126,8 +175,24 @@
     justify-content: space-evenly;
     background-color: #242424;
   }
+  .gplay-icon {
+    width: 6.4rem;
+  }
+  .appstore-icon {
+    width: 6rem;
+    margin-left: 0.5rem;
+  }
   .cod-available {
+    font-size: 0.5rem;
     margin-top: 1.3rem;
+  }
+  .rupee-symbol {
+    font-size: 1rem !important;
+    margin: 0rem !important;
+  }
+  .refresh-symbol {
+    font-size: 1rem !important;
+    margin: 0 !important;
   }
   .sm-handles {
     display: flex;
@@ -137,13 +202,21 @@
     color: white;
     background-color: #242424;
   }
-
+  .end {
+    flex-direction: column;
+  }
+  .sp-icons {
+    display: flex;
+  }
+  .shipping-icons {
+    display: flex;
+  }
   .sponsors {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
     background-color: #242424;
+    flex-direction: column;
   }
 
   .copyright-text {
@@ -158,14 +231,42 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     padding-left: 0rem;
     padding-bottom: 0rem;
     font-family: "Mukta", sans-serif;
+    width: 100%;
   }
-
+  .sm-icons span {
+    font-size: 1rem;
+  }
   .followUs {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
+    width: 100%;
+  }
+  .sp-icons {
+    justify-content: space-evenly !important;
+    margin: 0;
+    width: 100%;
+  }
+  .sp-icons span {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+  .visa-icon {
+    font-size: 1rem !important;
+  }
+  .fedex-icon {
+    margin-left: 0;
+    font-size: 1rem;
+    margin-right: 0;
+  }
+  .shipping-icons span {
+    font-size: 1rem;
+    margin-right: 0;
+    padding: 0;
   }
 }

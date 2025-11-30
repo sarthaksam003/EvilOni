@@ -6,7 +6,7 @@ import three from "./assets/three_.webp";
 import classes from "./ControlledCarousel.module.css";
 function UncontrolledExample({ deviceType }) {
   return (
-    <Carousel interval={3000} controls={deviceType === "mobile" ? false : true}>
+    <Carousel interval={3000} controls={deviceType === "mobile" ? false : true} className="carousel">
       <Carousel.Item className={classes.carouselItem1}>
         <Link to="/products/6493fd180b77b5cd6077dfa4">
           <img className="d-block w-100" src={one} alt="First slide" />

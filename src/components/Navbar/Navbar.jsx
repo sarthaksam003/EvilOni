@@ -80,7 +80,7 @@ function Navbar({ showCartHandler, hideCartHandler, onShowCart }) {
                   height: "10rem",
                   position: "absolute",
                   left: "50%",
-                  transform: "translate(-45%,10%)",
+                  transform: "translate(-43%,30%)",
                 }}
               />
               <ul className={classes["nav-menu-items"]} onClick={toggleSidebar}>

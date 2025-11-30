@@ -40,13 +40,15 @@ const Cartmodal = (props) => {
   // console.log("Initial cart items cart js    " + cartItems);
   return (
     <React.Fragment>
-      <Modal onClose={props.onClose} style={{width:"100%"}}>
+      <Modal onClose={props.onClose} style={{ width: "100%" }}>
         <div className={classes["close-btn"]}>
           <IoIcons.IoMdClose onClick={props.onClose} />
         </div>
         {!hasItemInCart ? (
           <div className={classes.emptycart}>
-            <BsIcons.BsCartX />
+            <span>
+              <BsIcons.BsCartX />
+            </span>
             <p>Cart is empty</p>
           </div>
         ) : (

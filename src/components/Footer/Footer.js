@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <React.Fragment>
-      <div className="footer-layout">
-        <div className="footer">
+      <div className="footer-layout ">
+        <div className="footer ">
           <div className="useful-links">
             <div>
               <ul>
@@ -54,89 +54,95 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
+              <div className="app-navs">
+                TRY OUR APP
+                <img src={playstore} alt="Google Play Store" />
+                <img src={appstore} alt="Apple App Store" />
+              </div>
             </div>
-            <ul className="cod-available">
-              <li>
-                <BiIcons.BiRupee
-                  style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                />
-                COD Available
-              </li>
-              <li>
-                <BiIcons.BiRefresh
-                  style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                />
-                30 Days Easy Return
-              </li>
-            </ul>
-          </div>
-          <div className="appnavssocials">
-            <div className="app-navs">
-              TRY OUR APP
-              <img src={playstore} alt="Google Play Store" />
-              <img src={appstore} alt="Apple App Store" />
-            </div>
-            <div className="sm-handles">
-              Follow Us:
-              <div className="sm-icons">
-                <BsIcons.BsFacebook style={{ marginRight: "1rem" }} />
-                <BsIcons.BsInstagram style={{ marginRight: "1rem" }} />
-                <BsIcons.BsTwitter style={{ marginRight: "1rem" }} />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                alignItems: "flex-start",
+              }}
+            >
+              <ul className="cod-available">
+                <li>
+                  <span className="rupee-symbol">
+                    <BiIcons.BiRupee />
+                  </span>
+                  COD Available
+                </li>
+                <li>
+                  <span className="refresh-symbol">
+                    <BiIcons.BiRefresh />
+                  </span>
+                  30 Days Easy Return
+                </li>
+              </ul>
+              <div className="appnavssocials">
+                <div className="sm-handles">
+                  Follow Us:
+                  <div className="sm-icons">
+                    <span>
+                      <BsIcons.BsFacebook />
+                    </span>
+                    <span>
+                      <BsIcons.BsInstagram />
+                    </span>
+                    <span>
+                      <BsIcons.BsTwitter />
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="end">
-            <div className="sponsors">
+            <div className="sponsors ">
               <div className="sp-icons" style={{ fontFamily: "Mukta" }}>
                 Secure Payment Partners:
-                <SiIcons.SiVisa
-                  style={{
-                    marginLeft: "1rem",
-                    fontSize: "2.5rem",
-                    marginRight: "1rem",
-                  }}
-                />
-                <SiIcons.SiGooglepay
-                  style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                />
-                <SiIcons.SiPaytm
-                  style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                />
-                <SiIcons.SiAmazonpay
-                  style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                />
+                <span className="first-sp-icon">
+                  <SiIcons.SiVisa />
+                </span>
+                <span>
+                  <SiIcons.SiGooglepay />
+                </span>
+                <span>
+                  <SiIcons.SiPaytm />
+                </span>
+                <span>
+                  <SiIcons.SiAmazonpay />
+                </span>
               </div>
               <div className="evil-oni-logo">
                 <img src={eviloni} alt="" />
+                <div className="copyright-text">&copy; Evil Oni 2021-22</div>
               </div>
               <div
                 className="shipping-icons"
                 style={{
-                  transform: "translateY(-0.5rem)",
                   fontFamily: "Mukta",
                 }}
               >
                 Shipping Partners:
-                <SiIcons.SiFedex
-                  style={{
-                    marginLeft: "1rem",
-                    fontSize: "3.5rem",
-                    marginRight: "1rem",
-                  }}
-                />
-                <SiIcons.SiDhl
-                  style={{ fontSize: "3.2rem", marginRight: "1rem" }}
-                />
-                <SiIcons.SiCaterpillar
-                  style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                />
-                <SiIcons.SiUps
-                  style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                />
+                <span>
+                  <SiIcons.SiFedex />
+                </span>
+                <span>
+                  <SiIcons.SiDhl />
+                </span>
+                <span>
+                  <SiIcons.SiCaterpillar />
+                </span>
+                <span>
+                  <SiIcons.SiUps />
+                </span>
               </div>
             </div>
-            <div className="copyright-text">&copy; Evil Oni 2021-22</div>
           </div>
         </div>
         <div className="footerMob">
@@ -184,15 +190,11 @@ const Footer = () => {
             </div>
             <ul className="cod-available">
               <li>
-                <BiIcons.BiRupee
-                  style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                />
+                <BiIcons.BiRupee />
                 COD Available
               </li>
               <li>
-                <BiIcons.BiRefresh
-                  style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                />
+                <BiIcons.BiRefresh />
                 30 Days Easy Return
               </li>
             </ul>
@@ -202,7 +204,6 @@ const Footer = () => {
               style={{
                 color: "white",
                 fontFamily: "Bebas Neue",
-                fontSize: "rem",
               }}
             >
               TRY OUR APP
@@ -216,12 +217,12 @@ const Footer = () => {
               <img
                 src={playstore}
                 alt="Google Play Store"
-                style={{ width: "9rem" }}
+                className="gplay-icon"
               />
               <img
                 src={appstore}
                 alt="Apple App Store"
-                style={{ width: "8rem",marginLeft:"0.5rem" }}
+                className="appstore-icon"
               />
             </div>
           </div>
@@ -229,69 +230,46 @@ const Footer = () => {
             <div className="end">
               <div className="followUs">
                 <div className="sm-icons">
-                  <div style={{ fontSize: "1.4rem", marginRight: "1rem" }}>
-                    Follow Us:
-                  </div>
-                  <BsIcons.BsFacebook
-                    style={{ fontSize: "2rem", marginRight: "1rem" }}
-                  />
-                  <BsIcons.BsInstagram
-                    style={{ fontSize: "2rem", marginRight: "1rem" }}
-                  />
-                  <BsIcons.BsTwitter
-                    style={{ fontSize: "2rem", marginRight: "1rem" }}
-                  />
+                  <div>Follow Us:</div>
+                  <BsIcons.BsFacebook />
+                  <BsIcons.BsInstagram />
+                  <BsIcons.BsTwitter />
                 </div>
               </div>
               <div className="sponsors">
                 <div className="sp-icons" style={{ fontFamily: "Mukta" }}>
                   Secure Payment Partners:
-                  <SiIcons.SiVisa
-                    style={{
-                      marginLeft: "1rem",
-                      fontSize: "2.5rem",
-                      marginRight: "1rem",
-                    }}
-                  />
-                  <SiIcons.SiGooglepay
-                    style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                  />
-                  <SiIcons.SiPaytm
-                    style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                  />
-                  <SiIcons.SiAmazonpay
-                    style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                  />
+                  <span>
+                    <SiIcons.SiVisa className="visa-icon" />
+                  </span>
+                  <span>
+                    <SiIcons.SiGooglepay />
+                  </span>
+                  <span>
+                    <SiIcons.SiPaytm />
+                  </span>
+                  <span>
+                    <SiIcons.SiAmazonpay />
+                  </span>
                 </div>
-                <div
-                  className="shipping-icons"
-                  style={{
-                    transform: "translateY(-0.5rem)",
-                    fontFamily: "Mukta",
-                  }}
-                >
+                <div className="shipping-icons">
                   Shipping Partners:
-                  <SiIcons.SiFedex
-                    style={{
-                      marginLeft: "1rem",
-                      fontSize: "3.5rem",
-                      marginRight: "1rem",
-                    }}
-                  />
-                  <SiIcons.SiDhl
-                    style={{ fontSize: "3.2rem", marginRight: "1rem" }}
-                  />
-                  <SiIcons.SiCaterpillar
-                    style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                  />
-                  <SiIcons.SiUps
-                    style={{ fontSize: "2.5rem", marginRight: "1rem" }}
-                  />
+                  <span>
+                    <SiIcons.SiFedex className="fedex-icon" />
+                  </span>
+                  <span>
+                    <SiIcons.SiDhl />
+                  </span>
+                  <span>
+                    <SiIcons.SiCaterpillar />
+                  </span>
+                  <span>
+                    <SiIcons.SiUps />
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-          <div className="copyright-text">&copy; Evil Oni 2021-22</div>
         </div>
       </div>
     </React.Fragment>
