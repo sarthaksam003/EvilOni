@@ -148,7 +148,7 @@ const Footer = () => {
         <div className="footerMob">
           <div className="useful-links">
             <div>
-              <ul className="borderRed">
+              <ul className="">
                 <span className="">
                   Need Help?
                 </span>
